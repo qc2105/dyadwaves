@@ -19,7 +19,7 @@
 
 
 using namespace std;
-extern "C" int _get_output_format( void ){ return 0; }
+//extern "C" int _get_output_format( void ){ return 0; }
 
 
 int main(int argc, char *argv[])

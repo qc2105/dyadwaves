@@ -162,7 +162,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     scene->setBackgroundBrush(Qt::black);
  //   scene->installEventFilter(this);
-    setMouseTracking(TRUE);
+    setMouseTracking(true);
     createStatusBar();
     view = new QGraphicsView();
     view->setScene(scene);
@@ -6616,7 +6616,7 @@ void MainWindow::lineplotmod(vector<double> &sig, int J_num){
         disp = disp.setNum(temp2 - temp2 *(qreal) iter/(qreal) num_y);
         QGraphicsTextItem *text = scene->addText(disp, newFont);
         text->setPos((temp2 - temp2 *(qreal) iter/(qreal) num_y) * sc,min*ht);
-        text->scale(1,-1);
+//        text->scale(1,-1);
 
     }
     int num_x=5;
@@ -6626,7 +6626,7 @@ void MainWindow::lineplotmod(vector<double> &sig, int J_num){
         disp = disp.setNum(max - ht1 * iter /num_x);
         QGraphicsTextItem *text = scene->addText(disp, newFont);
         text->setPos(rect.left() ,max*ht - ht *ht1 * iter/num_x);
-        text->scale(1,-1);
+//        text->scale(1,-1);
     }
 
 
