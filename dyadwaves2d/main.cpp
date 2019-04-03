@@ -17,15 +17,13 @@
  * with the software.
 */
 
-
 using namespace std;
 //extern "C" int _get_output_format( void ){ return 0; }
-
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-;
+    ;
     MainWindow w;
     w.setWindowState(Qt::WindowMaximized);
 
@@ -33,4 +31,3 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
-

@@ -45,18 +45,14 @@ class QAction;
 class QMenu;
 class QWidget;
 
-
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-public:
+  public:
     explicit MainWindow(QWidget *parent = 0);
 
-
-
-private slots:
+  private slots:
     void openFile2();
     void loadFile2(const QString &);
     void setCurrentFile(const QString &);
@@ -65,21 +61,21 @@ private slots:
     void setDecom(int);
     void setWave(const QString &);
     void computeDWT2();
-    void dispSWT(vector<double> &,int ,int , int);
-    void dispSWT_RGB(vector<double> &,vector<double> &,vector<double> &,int ,int , int);
-    void dispDWT_PER(vector<vector<double> > &,int ,int , int);
-    void dispDWT_PER_RGB(vector<vector<double> > &,vector<vector<double> > &,vector<vector<double> > &,
-                         int ,int , int);
+    void dispSWT(vector<double> &, int, int, int);
+    void dispSWT_RGB(vector<double> &, vector<double> &, vector<double> &, int, int, int);
+    void dispDWT_PER(vector<vector<double>> &, int, int, int);
+    void dispDWT_PER_RGB(vector<vector<double>> &, vector<vector<double>> &, vector<vector<double>> &,
+                         int, int, int);
 
-    void dispDWT_SYM(vector<double> &,int ,vector<int> );
-    void dispDWT_SYM_RGB(vector<double> &,vector<double> &,vector<double> &,int ,vector<int> );
+    void dispDWT_SYM(vector<double> &, int, vector<int>);
+    void dispDWT_SYM_RGB(vector<double> &, vector<double> &, vector<double> &, int, vector<int>);
     void setGauss_size(int);
 
-    void appx_coeff_per(vector<vector<double> > & );
-    void dispAPPX_PER(vector<vector<double> > &);
-    void dispAPPX_PER_RGB(vector<vector<double> > &,vector<vector<double> > &,vector<vector<double> > &);
-    void dispDENOISE(vector<vector<double> > &);
-    void dispDENOISE_RGB(vector<vector<double> > &,vector<vector<double> > &,vector<vector<double> > &);
+    void appx_coeff_per(vector<vector<double>> &);
+    void dispAPPX_PER(vector<vector<double>> &);
+    void dispAPPX_PER_RGB(vector<vector<double>> &, vector<vector<double>> &, vector<vector<double>> &);
+    void dispDENOISE(vector<vector<double>> &);
+    void dispDENOISE_RGB(vector<vector<double>> &, vector<vector<double>> &, vector<vector<double>> &);
     void enableIDWT();
     void setMode(const QString &);
     void setAppxMode(const QString &);
@@ -89,20 +85,20 @@ private slots:
     void setColProc(const QString &);
     void setColProc_appx(const QString &);
     void setColProc_denoise(const QString &);
-    void* showmsg();
+    void *showmsg();
     void SIGplot(vector<double> &);
-    void SWTplot(vector<double> &,vector<double> &, int, int);
-    void lineplot(vector<double> &,int, int , double , double );
+    void SWTplot(vector<double> &, vector<double> &, int, int);
+    void lineplot(vector<double> &, int, int, double, double);
     void lineplotmod(vector<double> &, int);
-    void lineplotmod2(vector<double> &, int, int,double,double);
+    void lineplotmod2(vector<double> &, int, int, double, double);
     void errormessage();
 
-    void DWT_SYMplot(vector<double> &,vector<double> &,int,vector<int> &);
-    void DWT_PERplot(vector<double> &,vector<double> &, int );
-    void* maxval(const vector<double> &, double &);
-    void* minval(const vector<double> &, double &);
-    void* maxval2(vector<vector<double> > &, double &);
-    void* minval2(vector<vector<double> > &, double &);
+    void DWT_SYMplot(vector<double> &, vector<double> &, int, vector<int> &);
+    void DWT_PERplot(vector<double> &, vector<double> &, int);
+    void *maxval(const vector<double> &, double &);
+    void *minval(const vector<double> &, double &);
+    void *maxval2(vector<vector<double>> &, double &);
+    void *minval2(vector<vector<double>> &, double &);
     void loadlena();
     void loadnoisylena();
     void loadsnow();
@@ -112,24 +108,23 @@ private slots:
     void DISPdialog2();
     void setAppxCoef(int);
     void approximateSig2();
-    void findthresh(vector<double> , int , double& );
-    void APPXplot(vector<double> &,vector<double> &);
+    void findthresh(vector<double>, int, double &);
+    void APPXplot(vector<double> &, vector<double> &);
     void wavedisp();
     void altflip(vector<double> &, vector<double> &);
-    void iterorth(vector<double> &,vector<double>& , int, string );
+    void iterorth(vector<double> &, vector<double> &, int, string);
     void ORTHplot(vector<double> &, vector<double> &);
-    void iterbiorth(vector<double> &,vector<double> &,vector<double> &,vector<double> &,
-                    vector<double>&,vector<double>& ,vector<double>& ,
-                    vector<double>& ,int) ;
-    void BIORTHplot(vector<double> &, vector<double> &,vector<double> &, vector<double> &);
+    void iterbiorth(vector<double> &, vector<double> &, vector<double> &, vector<double> &,
+                    vector<double> &, vector<double> &, vector<double> &,
+                    vector<double> &, int);
+    void BIORTHplot(vector<double> &, vector<double> &, vector<double> &, vector<double> &);
     void filtdisp();
-    void pointplot2(vector<double> &, int, int );
-    void dispMEDIAN(vector<vector<double> > &);
-    void dispMEDIAN_RGB(vector<vector<double> > &,vector<vector<double> > &,vector<vector<double> > &);
+    void pointplot2(vector<double> &, int, int);
+    void dispMEDIAN(vector<vector<double>> &);
+    void dispMEDIAN_RGB(vector<vector<double>> &, vector<vector<double>> &, vector<vector<double>> &);
 
     void setIMAGE();
     void resetIMAGE();
-
 
     void freqdisp();
     void freqdisp2();
@@ -143,11 +138,11 @@ private slots:
     void FILTERdialog2();
     void OUTPUTconsole2();
     int sgn(double);
-    void median(vector<double> &,double &);
-    void DENOISEplot(vector<double> &,vector<double> &);
-    void l2norm(const vector<double> &, double &) ;
-    void minindex(const vector<double> &, int & );
-    void* freq_one(vector<double> &, vector<double> &) ;
+    void median(vector<double> &, double &);
+    void DENOISEplot(vector<double> &, vector<double> &);
+    void l2norm(const vector<double> &, double &);
+    void minindex(const vector<double> &, int &);
+    void *freq_one(vector<double> &, vector<double> &);
     void filtfreq();
     void filtfreq2();
     void about();
@@ -158,10 +153,10 @@ private slots:
     void saveDENOISE2();
     void saveFILTER2();
     void saveDENOISECOEF();
-    void appx_coeff_sym(vector<double>  &);
+    void appx_coeff_sym(vector<double> &);
     void setExt_dn(int);
 
-    void conv2dfft(vector<double> &, int , int );
+    void conv2dfft(vector<double> &, int, int);
     void setColProc_filt(const QString &);
     void setSIGMA(const QString &);
 
@@ -172,23 +167,20 @@ private slots:
     void dwtFULLVIEW();
     void setSWTVAL(int);
 
-    void createEXP(vector<double> &, vector<int> &, int );
+    void createEXP(vector<double> &, vector<int> &, int);
     void dwtEXPVIEW();
 
-protected:
-     void mousePressEvent(QGraphicsSceneMouseEvent *);
+  protected:
+    void mousePressEvent(QGraphicsSceneMouseEvent *);
 
-
-
-private:
-
+  private:
     void createActions2();
     void createMenus2();
     void createToolBars2();
     void createStatusBar();
 
- //   virtual void mousePressEvent(QGraphicsSceneMouseEvent *);
- //   virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *);
+    //   virtual void mousePressEvent(QGraphicsSceneMouseEvent *);
+    //   virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *);
 
     QImage image;
     QImage dwtimage;
@@ -221,10 +213,8 @@ private:
     QWidget *dwtdial;
     QWidget *denoisedial;
 
-
-
     QPushButton *dwtbutton;
-//    QPushButton *idwtbutton;
+    //    QPushButton *idwtbutton;
     QCheckBox *idwtbutton;
     QComboBox *extension;
     QComboBox *extension_dn;
@@ -244,13 +234,13 @@ private:
     QPushButton *freqdispbutton;
     QPushButton *filtfreqbutton;
     QPushButton *denoisebutton;
-    QPushButton* dwtoutbutton;
-    QPushButton* freqoutbutton;
-    QPushButton* appxoutbutton;
-    QPushButton* appxcoefbutton;
-    QPushButton* denoiseoutbutton;
-    QPushButton* filteroutbutton;
-    QPushButton* denoisecoefbutton;
+    QPushButton *dwtoutbutton;
+    QPushButton *freqoutbutton;
+    QPushButton *appxoutbutton;
+    QPushButton *appxcoefbutton;
+    QPushButton *denoiseoutbutton;
+    QPushButton *filteroutbutton;
+    QPushButton *denoisecoefbutton;
     QPushButton *reportbutton;
     QPushButton *filtimagebutton;
     QPushButton *setimagebutton;
@@ -267,22 +257,16 @@ private:
     QLineEdit *sigmaline;
     QSignalMapper *signalMapper;
 
-
     QGraphicsScene *scene;
     QGraphicsView *view;
-    QObject* obj;
-    QEvent* event;
+    QObject *obj;
+    QEvent *event;
 
     //DWT_PER
 
     QComboBox *dwtlevels;
 
-//    friend class mouseitem;
-
-
-
+    //    friend class mouseitem;
 };
 
 #endif // MAINWINDOW_H
-
-
